@@ -35,3 +35,5 @@ dist.log_prob(torch.tensor(0.1)).cpu().detach().numpy()
 ```
 
 You don't need to do this with JAX.
+
+- The tensorflow backend is quite slow but the output of the NN is a tfp distribution object which is nice. For Keras + JAX and Keras + Pytorch you need to wrap the output of the NN into a distribution object.
