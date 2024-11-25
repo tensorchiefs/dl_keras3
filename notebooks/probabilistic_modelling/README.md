@@ -24,6 +24,14 @@ Probabilistic modelling using the keras 3.0 version and pytorch as the backend. 
 Takes about 15 seconds to run on colab for 1000 epochs.
 
 ##### Notes on local installation
-Currenly not working on Oliver's local machine (MAC). 
+Currenly very slow on Oliver's macbook pro 2023. Needs fix.
 
 
+## Summary
+- JAX is the fastest backend for probabilistic modelling with keras and also quite straightforward to use. Pytorch is slower and also needs detaching the tensors to get the values. E.q. 
+
+```
+dist.log_prob(torch.tensor(0.1)).cpu().detach().numpy()
+```
+
+You don't need to do this with JAX.
