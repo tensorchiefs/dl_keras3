@@ -2,7 +2,7 @@
 10_vit*
 
 data/
-
+*.npy
 
 .DS_Store
 # Byte-compiled / optimized / DLL files
